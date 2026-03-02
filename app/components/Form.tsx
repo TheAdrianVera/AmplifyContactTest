@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import validator from "validator"
 
 const Form = () => {
     //Success or error message shown after submit; null when none.
@@ -20,17 +21,28 @@ const Form = () => {
         const email = (form.elements.namedItem("email") as HTMLInputElement)
             ?.value?.trim()
 
-        if (name && email) {
-            setMessage({
-                type: "success",
-                text: "Thank you, we received your message.",
-            })
-        } else {
+        //Check for required fields
+        if (!name || !email) {
             setMessage({
                 type: "error",
                 text: "Please fill in all required fields (Name and Email).",
             })
+            return
         }
+
+        //Check for if Email
+        if (!validator.isEmail(email)) {
+            setMessage({
+                type: "error",
+                text: "Please enter a valid email address.",
+            })
+            return
+        }
+
+        setMessage({
+            type: "success",
+            text: "Thank you, we received your message.",
+        })
     }
 
     //Form HTML Structure
