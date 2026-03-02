@@ -1,24 +1,24 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amplify Test Site
 
-## Getting Started
+A simple Next.js app with a home page and a contact form. [View on GitHub](https://github.com/TheAdrianVera/AmplifyContactTest). The form requires name and email, validates the email format, and shows success or error messages on submit.
 
-First, run the development server:
+## What's in it
+
+- **Home page** – Single page with a button that links to the contact form.
+- **Contact form** – Name (required), Email (required), and Message. Submit shows a success message when name and email are valid, or an error if required fields are missing or the email is invalid.
+
+## Run it
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-.
+Open [http://localhost:3000](http://localhost:3000). Use the button to go to the contact form, fill in name and email (and optionally message), and submit to test validation and messages.
 
-## Learn More
+## Build
 
-
-You can check out more by [Adrian](https://www.adriangvera.com) - your feedback and contributions are welcome!
-
+```bash
+npm run build
+npm start
+```
