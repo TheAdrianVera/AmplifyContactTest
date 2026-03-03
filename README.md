@@ -9,14 +9,20 @@ A simple Next.js app with a home page and a contact form. [View on GitHub](https
 
 ## Run it
 
+You'll need to download the project folder.
+Once downloaded from inside the project folder you will run the following commands to install the project and run the development environment.
+
 ```bash
 npm install
 npm run dev
 ```
 
+Once the development environment is running you for visit the site locally.
 Open [http://localhost:3000](http://localhost:3000). Use the button to go to the contact form, fill in name and email (and optionally message), and submit to test validation and messages.
 
 ## Build
+
+If you would like to build the project follow these commands.
 
 ```bash
 npm run build
